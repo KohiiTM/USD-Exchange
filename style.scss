@@ -1,0 +1,166 @@
+// Modern color palette
+$primary: #2563eb;
+$secondary: #1e40af;
+$background: #f8fafc;
+$text: #1e293b;
+$border: #e2e8f0;
+$accent: #3b82f6;
+$error: #ef4444;
+$success: #22c55e;
+
+$font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  sans-serif;
+
+$spacing-unit: 1rem;
+$border-radius: 0.5rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text;
+  background-color: $background;
+  font-family: $font-family;
+  line-height: 1.5;
+  padding: $spacing-unit * 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: $spacing-unit * 2;
+  color: $primary;
+}
+
+// Form styles
+form {
+  margin-bottom: $spacing-unit * 2;
+
+  .input-group {
+    display: flex;
+    gap: $spacing-unit;
+    flex-wrap: wrap;
+
+    input {
+      padding: 0.75rem 1rem;
+      border: 1px solid $border;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+      }
+
+      &[type="submit"] {
+        background-color: $primary;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.table_component {
+  overflow: auto;
+  width: 100%;
+  margin: $spacing-unit * 2 0;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+  }
+
+  caption {
+    padding: $spacing-unit;
+    font-weight: 500;
+    color: $text;
+    text-align: left;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  th {
+    background-color: $background;
+    color: $text;
+    font-weight: 600;
+    text-align: left;
+    padding: $spacing-unit;
+    border-bottom: 2px solid $border;
+  }
+
+  td {
+    padding: $spacing-unit;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+#chart {
+  margin: $spacing-unit * 2 0;
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  margin: $spacing-unit 0;
+  padding: $spacing-unit;
+  border-radius: $border-radius;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: $spacing-unit;
+  }
+
+  .input-group {
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .table_component {
+    margin: $spacing-unit 0;
+  }
+
+  #chart {
+    width: 100%;
+    height: auto;
+  }
+}

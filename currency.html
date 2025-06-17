@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <h1>USD to ...</h1>
+    <form>
+      <div class="input-group">
+        <input
+          id="usd_amount"
+          placeholder="USD Amount"
+          type="number"
+          step="0.01"
+          min="0"
+          required
+        />
+        <input id="currency" placeholder="Currency Code" type="text" required />
+        <select id="chart-type">
+          <option value="force">Force Graph</option>
+          <option value="historical">Historical Chart</option>
+        </select>
+        <input type="submit" value="Convert" />
+      </div>
+    </form>
+    <br />
+    <div id="result"></div>
+
+    <br /><br /><br /><br />
+    <div class="table_component" role="region" tabindex="0">
+      <table>
+        <caption>
+          <p>
+            Example Codes | See all supported codes
+            <a
+              href="https://www.exchangerate-api.com/docs/supported-currencies"
+              target="_blank"
+              >here</a
+            >
+          </p>
+        </caption>
+        <thead>
+          <tr>
+            <th>Currency Code</th>
+            <th>Currency Name</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>JPY</td>
+            <td>Japanese Yen</td>
+            <td>Japan</td>
+          </tr>
+          <tr>
+            <td>CAD</td>
+            <td>Canadian Dollar</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>EUR</td>
+            <td>Euro</td>
+            <td>European Union</td>
+          </tr>
+          <tr>
+            <td>GBP</td>
+            <td>Pound Sterling</td>
+            <td>United Kingdom</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <svg id="chart" width="800" height="500"></svg>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </body>
+</html>

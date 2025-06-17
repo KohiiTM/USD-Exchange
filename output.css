@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1e293b;
+  background-color: #f8fafc;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2563eb;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+form .input-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+form .input-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+form .input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+form .input-group input[type=submit] {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+form .input-group input[type=submit]:hover {
+  background-color: #1e40af;
+}
+
+.table_component {
+  overflow: auto;
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.table_component table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+}
+.table_component caption {
+  padding: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  text-align: left;
+}
+.table_component caption a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.table_component caption a:hover {
+  text-decoration: underline;
+}
+.table_component th {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+.table_component td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.table_component td:last-child {
+  border-right: none;
+}
+.table_component tr:last-child td {
+  border-bottom: none;
+}
+
+#chart {
+  margin: 2rem 0;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  .input-group input {
+    width: 100%;
+  }
+  .table_component {
+    margin: 1rem 0;
+  }
+  #chart {
+    width: 100%;
+    height: auto;
+    border-radius: 60px;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
