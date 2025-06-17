@@ -20,7 +20,7 @@ The application utilizes the ExchangeRate-API (v6) for real-time currency conver
   - Red: USD (base currency)
   - Orange: Selected currency
   - Teal: Other currencies
-- Draggable nodes for custom layout
+- Draggable nodes
 - Automatic force simulation for optimal node placement
 
 ### Historical Trend Chart
